@@ -79,6 +79,7 @@ describe('AWS - Event Bridge Integration Test', function() {
       const markers = getMarkers(functionName);
 
       return putEvents('default', putEventEntries)
+        .then(() => { console.info('Default Event Bus: waiting for function logs'); return; })
         .then(() => waitForFunctionLogs(tmpDirPath, functionName, markers.start, markers.end))
         .then(logs => {
           expect(logs).to.include(`"source":"${eventSource}"`);
@@ -94,6 +95,7 @@ describe('AWS - Event Bridge Integration Test', function() {
       const markers = getMarkers(functionName);
 
       return putEvents(namedEventBusName, putEventEntries)
+        .then(() => { console.info('Custom Event Bus: waiting for function logs'); return; })
         .then(() => waitForFunctionLogs(tmpDirPath, functionName, markers.start, markers.end))
         .then(logs => {
           expect(logs).to.include(`"source":"${eventSource}"`);
@@ -104,11 +106,12 @@ describe('AWS - Event Bridge Integration Test', function() {
   });
 
   describe('Arn Event Bus', () => {
-    it('should invoke function when an event is sent to the event bus', () => { /// skip it as it fails w/o reason
+    it('should invoke function when an event is sent to the event bus', () => { // skip it as it fails w/o reason
       const functionName = 'eventBusArn';
       const markers = getMarkers(functionName);
 
       return putEvents(arnEventBusName, putEventEntries)
+        .then(() => { console.info('Arn Event Bus: waiting for function logs'); return; })
         .then(() => waitForFunctionLogs(tmpDirPath, functionName, markers.start, markers.end))
         .then(logs => {
           expect(logs).to.include(`"source":"${eventSource}"`);
