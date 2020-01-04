@@ -79,9 +79,9 @@ describe('AWS - Event Bridge Integration Test', function() {
       const markers = getMarkers(functionName);
 
       return putEvents('default', putEventEntries)
-        .then(() => { console.info('Default Event Bus: waiting for function logs'); return; })
+        // .then(() => { console.info('Default Event Bus: waiting for function logs'); return; })
         .then(() => waitForFunctionLogs(tmpDirPath, functionName, markers.start, markers.end))
-        .then(logs => { console.info('Default Event Bus: got function logs'); return logs; })
+        // .then(logs => { console.info('Default Event Bus: got function logs'); return logs; })
         .then(logs => {
           expect(logs).to.include(`"source":"${eventSource}"`);
           expect(logs).to.include(`"detail-type":"${putEventEntries[0].DetailType}"`);
@@ -96,9 +96,9 @@ describe('AWS - Event Bridge Integration Test', function() {
       const markers = getMarkers(functionName);
 
       return putEvents(namedEventBusName, putEventEntries)
-        .then(() => { console.info('Custom Event Bus: waiting for function logs'); return; })
+        // .then(() => { console.info('Custom Event Bus: waiting for function logs'); return; })
         .then(() => waitForFunctionLogs(tmpDirPath, functionName, markers.start, markers.end))
-        .then(logs => { console.info('Custom Event Bus: got function logs'); return logs; })
+        // .then(logs => { console.info('Custom Event Bus: got function logs'); return logs; })
         .then(logs => {
           expect(logs).to.include(`"source":"${eventSource}"`);
           expect(logs).to.include(`"detail-type":"${putEventEntries[0].DetailType}"`);
@@ -113,9 +113,9 @@ describe('AWS - Event Bridge Integration Test', function() {
       const markers = getMarkers(functionName);
 
       return putEvents(arnEventBusName, putEventEntries)
-        .then(() => { console.info('Arn Event Bus: waiting for function logs'); return; })
+        // .then(() => { console.info('Arn Event Bus: waiting for function logs'); return; })
         .then(() => waitForFunctionLogs(tmpDirPath, functionName, markers.start, markers.end))
-        .then(logs => { console.info('Arn Event Bus: got function logs'); return logs; })
+        // .then(logs => { console.info('Arn Event Bus: got function logs'); return logs; })
         .then(logs => {
           expect(logs).to.include(`"source":"${eventSource}"`);
           expect(logs).to.include(`"detail-type":"${putEventEntries[0].DetailType}"`);
