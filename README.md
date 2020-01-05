@@ -1,6 +1,10 @@
 ⚡ **Serverless Inc. is hiring to build the next generation of serverless development tools, [join us!](https://www.serverless.com/company/jobs/)**
 
 ---
+# About This Fork
+There is update API gateway stage [hack](https://github.com/serverless/serverless/pull/5692#issuecomment-467849311) executed after stack is successfully updated. The issue is that the hack do not respects custom resources of type AWS::ApiGateway::Stage in serverless configuration. The way issue is approached in this fork is to permanently disable the hack. Changes:
+- permanently disable the hack
+- publish it as public scoped NPM package
 
 [![Serverless Application Framework AWS Lambda API Gateway](https://s3.amazonaws.com/assets.github.serverless/readme-serverless-framework.gif)](http://serverless.com)
 
