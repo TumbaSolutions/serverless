@@ -1,11 +1,11 @@
 {
-  "name": "serverless",
+  "name": "@tumba-solutions/serverless",
   "version": "2.9.0",
   "description": "Serverless Framework - Build web, mobile and IoT applications with serverless architectures using AWS Lambda, Azure Functions, Google CloudFunctions & more",
   "preferGlobal": true,
   "homepage": "https://serverless.com/framework/docs/",
   "author": "serverless.com",
-  "repository": "serverless/serverless",
+  "repository": "TumbaSolutions/serverless",
   "keywords": [
     "serverless",
     "lambda",
@@ -218,5 +218,8 @@
   "engines": {
     "node": ">=10.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
 }
