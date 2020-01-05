@@ -1,5 +1,5 @@
 {
-  "name": "serverless",
+  "name": "@tumba-solutions/serverless",
   "version": "1.60.0",
   "engines": {
     "node": ">=6.0"
@@ -12,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/serverless/serverless"
+    "url": "https://github.com/TumbaSolutions/serverless"
   },
   "keywords": [
     "serverless",
@@ -204,5 +204,8 @@
     "uuid": "^2.0.3",
     "write-file-atomic": "^2.4.3",
     "yaml-ast-parser": "0.0.43"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
