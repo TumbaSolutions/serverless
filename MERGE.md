@@ -11,6 +11,7 @@ We do not do releases held from release-fast-track as its history is rewritten w
 ## Release
 - [ ] Create a new [**draft** release](https://github.com/TumbaSolutions/serverless/releases/new) in GitHub
   - [ ] Ensure that the "Tag version" is same as version number in `package.json`. Including NO 'v' in front of version number.
+  - [ ] Ensure that head of tumba branch will be tagged
 - [ ] Publish the GitHub release draft (Circle CI will automatically publish the new release to `npm`)
 
 ## Other
