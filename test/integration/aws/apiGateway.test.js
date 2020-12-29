@@ -202,7 +202,7 @@ describe('AWS - API Gateway Integration Test', function () {
       await deployService(serviceDir);
     });
 
-    it('should update the stage without service interruptions', () => {
+    it.skip('should update the stage without service interruptions', () => {
       // re-using the endpoint from the "minimal" test case
       const testEndpoint = `${endpoint}`;
 
