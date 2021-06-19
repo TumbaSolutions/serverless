@@ -7,6 +7,7 @@ We do not do releases held from release-fast-track as its history is rewritten w
 - [ ] git rebase --onto new old
 - [ ] resolve conflicts with whatever is your favourite tool. Usually there will be merge conflict in  `package.json`, but can be in `.travis.yml` too as it is modified compared to one that can be found in upstream.
 - [ ] aws-vault exec --no-session me npm run integration-test-run-all
+- [ ] npm test -- -b
 - [ ] git push --force
 ## Release
 - [ ] Create a new [**draft** release](https://github.com/TumbaSolutions/serverless/releases/new) in GitHub

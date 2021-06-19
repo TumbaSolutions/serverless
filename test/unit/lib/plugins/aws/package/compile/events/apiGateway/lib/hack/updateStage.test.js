@@ -751,7 +751,7 @@ describe('#updateStage()', () => {
 });
 
 describe('test/unit/lib/plugins/aws/package/compile/events/apiGateway/lib/hack/updateStage.test.js', () => {
-  it('should correctly add and remove stage tags during update', async () => {
+  it.skip('should correctly add and remove stage tags during update', async () => {
     const tagResourceStub = sinon.stub();
     const untagResourceStub = sinon.stub();
     await runServerless({
